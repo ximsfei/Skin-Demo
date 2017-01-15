@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="skin-support-release-">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/skin-support-release/res" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/skin-support-release/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
