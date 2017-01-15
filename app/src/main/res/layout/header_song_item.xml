@@ -20,14 +20,16 @@
                 android:layout_width="2dp"
                 android:layout_height="22dp"
                 android:layout_alignParentLeft="true"
-                android:background="@color/colorAccent" />
+                android:background="@color/tabIndicatorColor" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
                 android:layout_toRightOf="@id/indicator"
-                android:text="全部歌单" />
+                android:text="全部歌单"
+                android:textColor="@color/text_color"
+                android:textSize="17sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -35,12 +37,15 @@
                 android:layout_alignParentRight="true"
                 android:background="@drawable/select_song_menu_background"
                 android:clickable="true"
-                android:text="选择歌单" />
+                android:text="选择分类"
+                android:textColor="@color/text_color_description"
+                android:textSize="12sp" />
         </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="67dp">
+            android:layout_height="67dp"
+            android:background="@color/background_color_accent">
 
             <ImageView
                 android:layout_width="67dp"

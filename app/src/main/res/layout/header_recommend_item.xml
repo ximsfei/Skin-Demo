@@ -44,7 +44,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="8dp"
                     android:text="私人FM"
-                    android:textColor="@color/textColorPrimary"
+                    android:textColor="@color/text_color"
                     android:textSize="12sp" />
             </LinearLayout>
 
@@ -82,7 +82,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="每日歌曲推荐"
-                    android:textColor="@color/textColorPrimary"
+                    android:textColor="@color/text_color"
                     android:textSize="12sp" />
 
             </LinearLayout>
@@ -108,7 +108,7 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="8dp"
                     android:text="云音乐热歌榜"
-                    android:textColor="@color/textColorPrimary"
+                    android:textColor="@color/text_color"
                     android:textSize="12sp" />
             </LinearLayout>
 
