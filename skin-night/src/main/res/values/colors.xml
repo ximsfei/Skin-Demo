@@ -15,6 +15,7 @@
     <color name="content_background_color">#ff202020</color>
     <color name="footer_item_text_color">#aaa</color>
     <color name="adjust_text_color">#bbb</color>
+    <color name="adjust_pressed">#ff2f2f2f</color>
 
     <color name="text_color_description">#7d7d7d</color>
     <color name="text_color">#adadad</color>

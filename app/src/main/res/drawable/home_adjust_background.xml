@@ -14,7 +14,7 @@
 
             <corners android:bottomLeftRadius="3dp" android:bottomRightRadius="3dp" android:topLeftRadius="3dp" android:topRightRadius="3dp" />
             <padding android:bottom="6dp" android:left="12dp" android:right="12dp" android:top="6dp" />
-            <solid android:color="@color/colorPrimaryDark" />
+            <solid android:color="@color/adjust_pressed" />
         </shape>
     </item>
 </selector>

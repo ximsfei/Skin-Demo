@@ -6,7 +6,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <ImageView
+        <com.ximsfei.skindemo.widget.SquareImageView
             android:id="@+id/image"
             android:layout_width="match_parent"
             android:scaleType="fitXY"
