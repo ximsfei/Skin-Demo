@@ -11,6 +11,8 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.ximsfei.skindemo.R;
+import com.ximsfei.skindemo.bean.ImageItem;
+import com.ximsfei.skindemo.bean.RecommendItem;
 import com.ximsfei.skindemo.databinding.FooterRecommendItemBinding;
 import com.ximsfei.skindemo.databinding.FragmentRecommendBinding;
 import com.ximsfei.skindemo.databinding.HeaderRecommendItemBinding;
@@ -20,6 +22,13 @@ import com.ximsfei.skindemo.utils.TimeUtil;
 import com.youth.banner.loader.ImageLoader;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import static com.ximsfei.skindemo.DataManager.BANNER_IMAGES;
+import static com.ximsfei.skindemo.DataManager.IMAGES;
+import static com.ximsfei.skindemo.DataManager.LABELS;
+import static com.ximsfei.skindemo.DataManager.SUBTITLES;
+import static com.ximsfei.skindemo.DataManager.TITLES;
 
 /**
  * Created by ximsfei on 17-1-8.
@@ -63,6 +72,7 @@ public class RecommendFragment extends BaseFragment<FragmentRecommendBinding> {
     protected void loadData() {
         loadLocalData();
         loadBannerAd();
+        load();
     }
 
     private void loadLocalData() {
@@ -71,9 +81,6 @@ public class RecommendFragment extends BaseFragment<FragmentRecommendBinding> {
                 : getTodayTime().get(2));
     }
 
-    /**
-     * 获取当天日期
-     */
     private ArrayList<String> getTodayTime() {
         String data = TimeUtil.getData();
         String[] split = data.split("-");
@@ -89,18 +96,9 @@ public class RecommendFragment extends BaseFragment<FragmentRecommendBinding> {
 
     private void loadBannerAd() {
         mBannerImages.clear();
-        mBannerImages.add(R.drawable.home_banner_1);
-        mBannerImages.add(R.drawable.home_banner_2);
-        mBannerImages.add(R.drawable.home_banner_3);
-        mBannerImages.add(R.drawable.home_banner_4);
-        mBannerImages.add(R.drawable.home_banner_5);
-        mBannerImages.add(R.drawable.home_banner_6);
-        mBannerImages.add(R.drawable.home_banner_7);
-        mBannerImages.add(R.drawable.home_banner_8);
-        mBannerImages.add(R.drawable.home_banner_9);
-        mBannerImages.add(R.drawable.home_banner_10);
-        mBannerImages.add(R.drawable.home_banner_11);
-        mBannerImages.add(R.drawable.home_banner_12);
+        for (int i = 0; i < BANNER_IMAGES.length; i++) {
+            mBannerImages.add(BANNER_IMAGES[i]);
+        }
 
         mHeaderBinding.banner
                 .setDelayTime(5000)
@@ -115,5 +113,22 @@ public class RecommendFragment extends BaseFragment<FragmentRecommendBinding> {
                                 .into(imageView);
                     }
                 }).start();
+    }
+
+    private void load() {
+        mAdapter.clear();
+        List<RecommendItem> list = new ArrayList<>();
+        for (int i = 0; i < LABELS.length; i++) {
+            RecommendItem item = new RecommendItem();
+            item.title = LABELS[i];
+            item.item0 = new ImageItem(TITLES[i * 6], SUBTITLES[i * 6], IMAGES[i * 6]);
+            item.item1 = new ImageItem(TITLES[i * 6 + 1], SUBTITLES[i * 6 + 1], IMAGES[i * 6 + 1]);
+            item.item2 = new ImageItem(TITLES[i * 6 + 2], SUBTITLES[i * 6 + 2], IMAGES[i * 6 + 2]);
+            item.item3 = new ImageItem(TITLES[i * 6 + 3], SUBTITLES[i * 6 + 3], IMAGES[i * 6 + 3]);
+            item.item4 = new ImageItem(TITLES[i * 6 + 4], SUBTITLES[i * 6 + 4], IMAGES[i * 6 + 4]);
+            item.item5 = new ImageItem(TITLES[i * 6 + 5], SUBTITLES[i * 6 + 5], IMAGES[i * 6 + 5]);
+            list.add(item);
+        }
+        mAdapter.addAll(list);
     }
 }

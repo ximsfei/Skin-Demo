@@ -15,7 +15,7 @@ public abstract class BaseRecyclerViewAdapter<T> extends RecyclerView.Adapter<Ba
 
     @Override
     public void onBindViewHolder(BaseRecyclerViewHolder holder, final int position) {
-        holder.onBaseBindViewHolder(null, position);
+        holder.onBaseBindViewHolder(data.get(position), position);
     }
 
     @Override

@@ -20,6 +20,12 @@ public abstract class BaseFragment<VDB extends ViewDataBinding> extends Fragment
     @LayoutRes
     protected abstract int getLayoutId();
 
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        loadData();
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -31,12 +37,6 @@ public abstract class BaseFragment<VDB extends ViewDataBinding> extends Fragment
 
     protected void onCreateVew(LayoutInflater inflater, Bundle savedInstanceState) {
 
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        loadData();
     }
 
     protected abstract void loadData();
