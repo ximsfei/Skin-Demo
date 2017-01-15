@@ -21,10 +21,8 @@ public class RecommendAdapter extends BaseRecyclerViewAdapter<RecommendItem> {
     public static final int TYPE_LASTEST = 3;
     public static final int TYPE_MV = 4;
     public static final int TYPE_RADIO = 5;
-    private final LayoutInflater mInflater;
 
     public RecommendAdapter(Context context) {
-        mInflater = LayoutInflater.from(context);
     }
 
     @Override
@@ -42,32 +40,26 @@ public class RecommendAdapter extends BaseRecyclerViewAdapter<RecommendItem> {
             mBinding.title.setText(item.title);
             Context context = mBinding.recommend1.image.getContext();
             Glide.with(context).load(item.item0.image)
-                    .placeholder(R.drawable.loading)
                     .error(R.drawable.loading)
                     .crossFade(1000)
                     .into(mBinding.recommend1.image);
             Glide.with(context).load(item.item1.image)
-                    .placeholder(R.drawable.loading)
                     .error(R.drawable.loading)
                     .crossFade(1000)
                     .into(mBinding.recommend2.image);
             Glide.with(context).load(item.item2.image)
-                    .placeholder(R.drawable.loading)
                     .error(R.drawable.loading)
                     .crossFade(1000)
                     .into(mBinding.recommend3.image);
             Glide.with(context).load(item.item3.image)
-                    .placeholder(R.drawable.loading)
                     .error(R.drawable.loading)
                     .crossFade(1000)
                     .into(mBinding.recommend4.image);
             Glide.with(context).load(item.item4.image)
-                    .placeholder(R.drawable.loading)
                     .error(R.drawable.loading)
                     .crossFade(1000)
                     .into(mBinding.recommend5.image);
             Glide.with(context).load(item.item5.image)
-                    .placeholder(R.drawable.loading)
                     .error(R.drawable.loading)
                     .crossFade(1000)
                     .into(mBinding.recommend6.image);

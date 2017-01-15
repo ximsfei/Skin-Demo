@@ -11,7 +11,7 @@ import com.ximsfei.skindemo.ui.base.BaseFragment;
 import com.ximsfei.skindemo.ui.discover.RadioFragment;
 import com.ximsfei.skindemo.ui.discover.RankingFragment;
 import com.ximsfei.skindemo.ui.discover.RecommendFragment;
-import com.ximsfei.skindemo.ui.discover.SongFragment;
+import com.ximsfei.skindemo.ui.discover.SongMenuFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,7 +42,7 @@ public class DiscoverFragment extends BaseFragment<FragmentDiscoverBinding> {
     private void configFragments() {
         List<Fragment> list = new ArrayList<>();
         list.add(new RecommendFragment());
-        list.add(new SongFragment());
+        list.add(new SongMenuFragment());
         list.add(new RadioFragment());
         list.add(new RankingFragment());
         List<String> listTitle = new ArrayList<>();
