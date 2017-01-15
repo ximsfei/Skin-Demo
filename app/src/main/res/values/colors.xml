@@ -12,6 +12,8 @@
     <color name="day_text_color_pressed">#ffffffff</color>
     <color name="divider_line_color">#ffd4d4d4</color>
     <color name="content_background_color">#f2f4f5</color>
-    <color name="footer_item_text_color">#7D7D7D</color>
     <color name="adjust_text_color">#ffce3d3a</color>
+
+    <color name="text_color_description">#7d7d7d</color>
+    <color name="text_color">#3d3d3d</color>
 </resources>

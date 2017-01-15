@@ -20,7 +20,7 @@
             android:layout_below="@+id/line"
             android:layout_centerHorizontal="true"
             android:text="现在可以根据个人喜好，自由调整首页项目顺序啦~"
-            android:textColor="@color/footer_item_text_color"
+            android:textColor="@color/text_color_description"
             android:textSize="10sp" />
 
         <LinearLayout

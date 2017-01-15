@@ -78,7 +78,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
 
     public void onNightModeClick(View view) {
         if (!SPUtils.getInstance().getNightMode()) {
-            SkinCompatManager.getInstance().loadSkin("cloudsquare-night.skin", null);
+            SkinCompatManager.getInstance().loadSkin("night.skin", null);
         } else {
             SkinCompatManager.getInstance().restoreDefaultTheme();
         }

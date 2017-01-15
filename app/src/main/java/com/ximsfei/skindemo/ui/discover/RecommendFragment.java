@@ -107,8 +107,6 @@ public class RecommendFragment extends BaseFragment<FragmentRecommendBinding> {
                     @Override
                     public void displayImage(Context context, Object path, ImageView imageView) {
                         Glide.with(context).load(path)
-                                .placeholder(R.drawable.img_two_bi_one)
-                                .error(R.drawable.img_two_bi_one)
                                 .crossFade(1000)
                                 .into(imageView);
                     }
