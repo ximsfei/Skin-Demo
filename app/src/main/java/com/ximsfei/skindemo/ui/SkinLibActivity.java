@@ -14,6 +14,7 @@ import com.ximsfei.skindemo.databinding.ActivitySkinLibBinding;
 import com.ximsfei.skindemo.databinding.HeaderSkinLibBinding;
 import com.ximsfei.skindemo.ui.adapter.SkinLibAdapter;
 import com.ximsfei.skindemo.ui.base.BaseActivity;
+import com.ximsfei.skindemo.utils.SPUtils;
 
 import skin.support.SkinCompatManager;
 
@@ -58,23 +59,55 @@ public class SkinLibActivity extends BaseActivity<ActivitySkinLibBinding> {
         mHeaderBinding.red.name.setText("官方红");
         mHeaderBinding.red.preview.setAspectRatio(4 * 1.0f / 3);
         mHeaderBinding.red.preview.setImageResource(R.drawable.skin_red);
+        mHeaderBinding.red.getRoot().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SkinCompatManager.getInstance().restoreDefaultTheme();
+                SPUtils.getInstance().setNightMode(false).commitEditor();
+                showSkinIndicator(0);
+            }
+        });
         mHeaderBinding.white.name.setText("官方白");
         mHeaderBinding.white.preview.setAspectRatio(4 * 1.0f / 3);
         mHeaderBinding.white.preview.setImageResource(R.drawable.skin_white);
+        mHeaderBinding.white.getRoot().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SkinCompatManager.getInstance().loadSkin("white.skin", new SkinCompatManager.SkinLoaderListener() {
+                    @Override
+                    public void onStart() {
+                    }
+
+                    @Override
+                    public void onSuccess() {
+                        SPUtils.getInstance().setNightMode(false).commitEditor();
+                        showSkinIndicator();
+                    }
+
+                    @Override
+                    public void onFailed(String s) {
+                    }
+                });
+            }
+        });
 //        mHeaderBinding.color.getRoot().setVisibility(View.INVISIBLE);
         mHeaderBinding.color.name.setText("自选颜色");
         mHeaderBinding.color.preview.setAspectRatio(4 * 1.0f / 3);
         mHeaderBinding.color.preview.setImageResource(R.drawable.skin_color);
+        showSkinIndicator();
+    }
+
+    private void showSkinIndicator() {
         String curSkinName = SkinCompatManager.getInstance().getCurSkinName();
         for (int i = 0; i < SKIN_LIBS.length; i++) {
             if (SKIN_LIBS[i].equals(curSkinName)) {
-                showSkin(i);
+                showSkinIndicator(i);
             }
         }
     }
 
-    private void showSkin(int index) {
-        hideSkin(mCurSkin);
+    private void showSkinIndicator(int index) {
+        hideSkinIndicator(mCurSkin);
         switch (index) {
             case 0:
                 mHeaderBinding.red.description.setText("使用中");
@@ -97,7 +130,7 @@ public class SkinLibActivity extends BaseActivity<ActivitySkinLibBinding> {
         }
     }
 
-    private void hideSkin(int index) {
+    private void hideSkinIndicator(int index) {
         mCurSkin = -1;
         switch (index) {
             case 0:

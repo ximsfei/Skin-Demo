@@ -28,6 +28,8 @@ import java.util.List;
 
 import skin.support.SkinCompatManager;
 
+import static com.ximsfei.skindemo.DataManager.NIGHT_SKIN;
+
 /**
  * Created by ximsfei on 17-1-7.
  */
@@ -39,6 +41,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
     private int mCurrentFragment = TabState.DEFAULT;
 
     private MainHeaderLayoutBinding mMainHeaderBinding;
+    private boolean mRefreshNightModeSwitch = false;
 
     @Override
     protected int getLayoutResId() {
@@ -75,6 +78,8 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
     }
 
     public void goSkinLibActivity(View view) {
+        mRefreshNightModeSwitch = true;
+        mDataBinding.drawerLayout.closeDrawer(GravityCompat.START);
         Intent intent = new Intent(this, SkinLibActivity.class);
         startActivity(intent);
     }
@@ -85,9 +90,10 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
 
     public void onNightModeClick(View view) {
         if (!SPUtils.getInstance().getNightMode()) {
-            SkinCompatManager.getInstance().loadSkin("night.skin", null);
+            SPUtils.getInstance().setCurSkin(SkinCompatManager.getInstance().getCurSkinName()).commitEditor();
+            SkinCompatManager.getInstance().loadSkin(NIGHT_SKIN);
         } else {
-            SkinCompatManager.getInstance().restoreDefaultTheme();
+            SkinCompatManager.getInstance().loadSkin(SPUtils.getInstance().getCurSkin());
         }
         SPUtils.getInstance().setNightMode(!SPUtils.getInstance().getNightMode()).commitEditor();
         mMainHeaderBinding.dayNightSwitch.setChecked(SPUtils.getInstance().getNightMode());
@@ -101,6 +107,14 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
         mDataBinding.viewPager.setAdapter(new TabFragmentPagerAdapter(getSupportFragmentManager(), list));
         mDataBinding.viewPager.addOnPageChangeListener(mViewPagerListener);
         setPageSelected(mCurrentFragment);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (mRefreshNightModeSwitch && mMainHeaderBinding != null) {
+            mMainHeaderBinding.dayNightSwitch.setChecked(SPUtils.getInstance().getNightMode());
+        }
     }
 
     @Override

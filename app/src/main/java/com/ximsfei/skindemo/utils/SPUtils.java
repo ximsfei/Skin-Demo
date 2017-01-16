@@ -3,6 +3,8 @@ package com.ximsfei.skindemo.utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import skin.support.SkinCompatManager;
+
 /**
  * Created by ximsfei on 17-1-8.
  */
@@ -11,6 +13,7 @@ public class SPUtils {
     private static final String FILE_NAME = "meta-data";
 
     private static final String KEY_MODE_NIGHT = "mode-night";
+    private static final String KEY_CUR_SKIN = "cur-skin";
     private static SPUtils sInstance;
     private final Context mApp;
     private final SharedPreferences mPref;
@@ -49,4 +52,12 @@ public class SPUtils {
         mEditor.apply();
     }
 
+    public SPUtils setCurSkin(String curSkinName) {
+        mEditor.putString(KEY_CUR_SKIN, curSkinName);
+        return this;
+    }
+
+    public String getCurSkin() {
+        return mPref.getString(KEY_CUR_SKIN, "");
+    }
 }
