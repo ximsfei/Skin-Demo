@@ -52,7 +52,7 @@ public abstract class BaseActivity<VDB extends ViewDataBinding> extends SkinComp
         if (actionBar != null) {
             actionBar.setDisplayShowTitleEnabled(false);
         }
-        toolbar.setNavigationIcon(R.drawable.ic_back_white);
+        toolbar.setNavigationIcon(R.drawable.ic_back);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
