@@ -108,7 +108,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:layout_marginTop="8dp"
             android:background="?attr/selectableItemBackground"
             android:clickable="true"
             android:gravity="center_vertical"
@@ -134,7 +133,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:layout_marginTop="8dp"
             android:background="?attr/selectableItemBackground"
             android:clickable="true"
             android:gravity="center_vertical"
@@ -160,7 +158,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:layout_marginTop="8dp"
             android:background="?attr/selectableItemBackground"
             android:clickable="true"
             android:gravity="center_vertical"
@@ -191,7 +188,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:layout_marginTop="8dp"
             android:background="?attr/selectableItemBackground"
             android:clickable="true"
             android:gravity="center_vertical"
@@ -217,7 +213,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:layout_marginTop="8dp"
             android:background="?attr/selectableItemBackground"
             android:clickable="true"
             android:gravity="center_vertical"
@@ -243,13 +238,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="官方红"
-                android:textColor="@color/text_color" />
+                android:textSize="12sp"
+                android:textColor="@color/text_color_description" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:layout_marginTop="8dp"
             android:background="?attr/selectableItemBackground"
             android:clickable="true"
             android:gravity="center_vertical"
@@ -282,7 +277,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:layout_marginTop="8dp"
             android:background="?attr/selectableItemBackground"
             android:clickable="true"
             android:gravity="center_vertical"
@@ -308,7 +302,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:layout_marginTop="8dp"
             android:background="?attr/selectableItemBackground"
             android:clickable="true"
             android:gravity="center_vertical"
@@ -334,7 +327,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:layout_marginTop="8dp"
             android:background="?attr/selectableItemBackground"
             android:clickable="true"
             android:gravity="center_vertical"
@@ -360,7 +352,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:layout_marginTop="8dp"
             android:background="?attr/selectableItemBackground"
             android:clickable="true"
             android:gravity="center_vertical"
@@ -386,7 +377,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:layout_marginTop="8dp"
             android:background="@color/background_color_accent"
             android:clickable="true"
             android:gravity="center_vertical"
