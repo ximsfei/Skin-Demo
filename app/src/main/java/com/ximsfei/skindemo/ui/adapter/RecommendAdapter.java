@@ -39,6 +39,7 @@ public class RecommendAdapter extends BaseRecyclerViewAdapter<RecommendItem> {
         public void onBindViewHolder(RecommendItem item, int position) {
             mBinding.title.setText(item.title);
             Context context = mBinding.recommend1.image.getContext();
+            mBinding.indicator.setImageResource(item.indicator);
             Glide.with(context).load(item.item0.image)
                     .error(R.drawable.loading)
                     .crossFade(1000)

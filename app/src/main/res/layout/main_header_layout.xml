@@ -238,8 +238,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="官方红"
-                android:textSize="12sp"
-                android:textColor="@color/text_color_description" />
+                android:textColor="@color/text_color_description"
+                android:textSize="12sp" />
         </LinearLayout>
 
         <LinearLayout

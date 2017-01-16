@@ -27,6 +27,7 @@ import java.util.List;
 import static com.ximsfei.skindemo.DataManager.BANNER_IMAGES;
 import static com.ximsfei.skindemo.DataManager.IMAGES;
 import static com.ximsfei.skindemo.DataManager.LABELS;
+import static com.ximsfei.skindemo.DataManager.LABELS_INDICATOR;
 import static com.ximsfei.skindemo.DataManager.SUBTITLES;
 import static com.ximsfei.skindemo.DataManager.TITLES;
 
@@ -119,6 +120,7 @@ public class RecommendFragment extends BaseFragment<FragmentRecommendBinding> {
         for (int i = 0; i < LABELS.length; i++) {
             RecommendItem item = new RecommendItem();
             item.title = LABELS[i];
+            item.indicator = LABELS_INDICATOR[i];
             item.item0 = new ImageItem(TITLES[i * 6], SUBTITLES[i * 6], IMAGES[i * 6]);
             item.item1 = new ImageItem(TITLES[i * 6 + 1], SUBTITLES[i * 6 + 1], IMAGES[i * 6 + 1]);
             item.item2 = new ImageItem(TITLES[i * 6 + 2], SUBTITLES[i * 6 + 2], IMAGES[i * 6 + 2]);

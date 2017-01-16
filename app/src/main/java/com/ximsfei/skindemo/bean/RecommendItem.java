@@ -6,6 +6,7 @@ package com.ximsfei.skindemo.bean;
 
 public class RecommendItem {
     public String title;
+    public int indicator;
 
     public ImageItem item0;
     public ImageItem item1;

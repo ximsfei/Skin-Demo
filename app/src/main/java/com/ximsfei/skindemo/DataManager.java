@@ -26,6 +26,10 @@ public class DataManager {
     public static final String[] LABELS = {
             "推荐歌曲", "独家放送", "最新音乐", "推荐MV", "主播电台"
     };
+    public static final int[] LABELS_INDICATOR = {
+            R.drawable.ic_indicator_0, R.drawable.ic_indicator_1, R.drawable.ic_indicator_2,
+            R.drawable.ic_indicator_3, R.drawable.ic_indicator_4
+    };
     public static final String[] TITLES = {
             "海明威", "小说", "中国文学",
             "村上春树", "王小波", "余华",
