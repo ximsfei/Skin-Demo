@@ -3,4 +3,5 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="status_bar_height">24dp</dimen>
+    <dimen name="text_size_title">24sp</dimen>
 </resources>

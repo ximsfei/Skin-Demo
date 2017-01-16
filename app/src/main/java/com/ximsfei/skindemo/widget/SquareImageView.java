@@ -9,6 +9,9 @@ import android.widget.ImageView;
  */
 
 public class SquareImageView extends ImageView {
+    private static final float DEFAULT_ASPECT_RATIO = 1.0f;
+    private float mAspectRatio = DEFAULT_ASPECT_RATIO;
+
     public SquareImageView(Context context) {
         super(context);
     }
@@ -24,6 +27,13 @@ public class SquareImageView extends ImageView {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        setMeasuredDimension(getMeasuredWidth(), getMeasuredWidth());
+        if (mAspectRatio <= 0) {
+            mAspectRatio = DEFAULT_ASPECT_RATIO;
+        }
+        setMeasuredDimension(getMeasuredWidth(), (int) (getMeasuredWidth() * mAspectRatio));
+    }
+
+    public void setAspectRatio(float aspectRatio) {
+        mAspectRatio = aspectRatio;
     }
 }

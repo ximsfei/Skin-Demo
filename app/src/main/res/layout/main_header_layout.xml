@@ -216,7 +216,7 @@
             android:background="?attr/selectableItemBackground"
             android:clickable="true"
             android:gravity="center_vertical"
-            android:onClick="@{listener.onNightModeClick}"
+            android:onClick="@{listener.goSkinLibActivity}"
             android:orientation="horizontal"
             android:paddingLeft="@dimen/activity_horizontal_margin"
             android:paddingRight="@dimen/activity_horizontal_margin">

@@ -5,6 +5,10 @@ package com.ximsfei.skindemo;
  */
 
 public class DataManager {
+    public static final String NIGHT_SKIN = "night.skin";
+    public static final String[] SKIN_LIBS = {
+            "", "white.skin", "color.skin"
+    };
     public static final int[] BANNER_IMAGES = {
             R.drawable.home_banner_1, R.drawable.home_banner_2, R.drawable.home_banner_3,
             R.drawable.home_banner_4, R.drawable.home_banner_5, R.drawable.home_banner_6,

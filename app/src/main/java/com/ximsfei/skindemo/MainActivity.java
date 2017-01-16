@@ -1,5 +1,6 @@
 package com.ximsfei.skindemo;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -14,6 +15,7 @@ import android.view.View;
 
 import com.ximsfei.skindemo.databinding.ActivityMainBinding;
 import com.ximsfei.skindemo.databinding.MainHeaderLayoutBinding;
+import com.ximsfei.skindemo.ui.SkinLibActivity;
 import com.ximsfei.skindemo.ui.adapter.TabFragmentPagerAdapter;
 import com.ximsfei.skindemo.ui.DiscoverFragment;
 import com.ximsfei.skindemo.ui.FriendsFragment;
@@ -70,6 +72,11 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
         navigationView.addHeaderView(headerView);
         mMainHeaderBinding = DataBindingUtil.bind(headerView);
         mMainHeaderBinding.setListener(this);
+    }
+
+    public void goSkinLibActivity(View view) {
+        Intent intent = new Intent(this, SkinLibActivity.class);
+        startActivity(intent);
     }
 
     public boolean getNightMode() {
