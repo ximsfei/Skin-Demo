@@ -94,14 +94,14 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_daynight_indicator" />
+                android:src="@drawable/ic_message_indicator" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_weight="1"
-                android:text="夜间模式"
+                android:text="关于作者"
                 android:textColor="@color/text_color" />
         </LinearLayout>
 
@@ -120,14 +120,14 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_daynight_indicator" />
+                android:src="@drawable/ic_vip_indicator" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_weight="1"
-                android:text="夜间模式"
+                android:text="会员中心"
                 android:textColor="@color/text_color" />
         </LinearLayout>
 
@@ -146,14 +146,14 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_daynight_indicator" />
+                android:src="@drawable/ic_shopping_indicator" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_weight="1"
-                android:text="夜间模式"
+                android:text="商城"
                 android:textColor="@color/text_color" />
         </LinearLayout>
 
@@ -172,14 +172,14 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_daynight_indicator" />
+                android:src="@drawable/ic_online_indicator" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_weight="1"
-                android:text="夜间模式"
+                android:text="在线听歌免流量"
                 android:textColor="@color/text_color" />
         </LinearLayout>
 
@@ -203,14 +203,14 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_daynight_indicator" />
+                android:src="@drawable/ic_sound_hound_indicator" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_weight="1"
-                android:text="夜间模式"
+                android:text="听歌识曲"
                 android:textColor="@color/text_color" />
         </LinearLayout>
 
@@ -229,14 +229,20 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_daynight_indicator" />
+                android:src="@drawable/ic_theme_indicator" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_weight="1"
-                android:text="夜间模式"
+                android:text="主题换肤"
+                android:textColor="@color/text_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="官方红"
                 android:textColor="@color/text_color" />
         </LinearLayout>
 
@@ -288,14 +294,14 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_daynight_indicator" />
+                android:src="@drawable/ic_timing_indicator" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_weight="1"
-                android:text="夜间模式"
+                android:text="定时停止播放"
                 android:textColor="@color/text_color" />
         </LinearLayout>
 
@@ -314,14 +320,14 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_daynight_indicator" />
+                android:src="@drawable/ic_scanner_indicator" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_weight="1"
-                android:text="夜间模式"
+                android:text="扫一扫"
                 android:textColor="@color/text_color" />
         </LinearLayout>
 
@@ -340,14 +346,14 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_daynight_indicator" />
+                android:src="@drawable/ic_music_alarm_indicator" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_weight="1"
-                android:text="夜间模式"
+                android:text="音乐闹钟"
                 android:textColor="@color/text_color" />
         </LinearLayout>
 
@@ -366,14 +372,14 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_daynight_indicator" />
+                android:src="@drawable/ic_driving_mode_indicator" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_weight="1"
-                android:text="夜间模式"
+                android:text="驾驶模式"
                 android:textColor="@color/text_color" />
         </LinearLayout>
 
@@ -381,10 +387,10 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginTop="8dp"
-            android:clickable="true"
-            android:gravity="center_vertical"
-            android:onClick="@{listener.onNightModeClick}"
             android:background="@color/background_color_accent"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:onClick="@{listener.onNightModeClick}"
             android:orientation="horizontal">
 
             <Button
