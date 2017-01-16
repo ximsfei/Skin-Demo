@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffffff</color>
+    <color name="status_bar_color">#aaa</color>
+    <color name="text_color_title">#ff000000</color>
+</resources>

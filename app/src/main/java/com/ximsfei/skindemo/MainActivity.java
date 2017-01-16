@@ -29,6 +29,8 @@ import java.util.List;
 import skin.support.SkinCompatManager;
 
 import static com.ximsfei.skindemo.DataManager.NIGHT_SKIN;
+import static com.ximsfei.skindemo.DataManager.SKIN_LIBS;
+import static com.ximsfei.skindemo.DataManager.SKIN_NAMES;
 
 /**
  * Created by ximsfei on 17-1-7.
@@ -36,12 +38,12 @@ import static com.ximsfei.skindemo.DataManager.NIGHT_SKIN;
 
 public class MainActivity extends BaseActivity<ActivityMainBinding> {
     private final static String TAG = MainActivity.class.getSimpleName();
+    private static final int SELECT_SKIN_REQUEST_CODE = 100;
 
     private ViewPagerListener mViewPagerListener = new ViewPagerListener();
     private int mCurrentFragment = TabState.DEFAULT;
 
     private MainHeaderLayoutBinding mMainHeaderBinding;
-    private boolean mRefreshNightModeSwitch = false;
 
     @Override
     protected int getLayoutResId() {
@@ -75,13 +77,13 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
         navigationView.addHeaderView(headerView);
         mMainHeaderBinding = DataBindingUtil.bind(headerView);
         mMainHeaderBinding.setListener(this);
+        initSkinName();
     }
 
     public void goSkinLibActivity(View view) {
-        mRefreshNightModeSwitch = true;
         mDataBinding.drawerLayout.closeDrawer(GravityCompat.START);
         Intent intent = new Intent(this, SkinLibActivity.class);
-        startActivity(intent);
+        startActivityForResult(intent, SELECT_SKIN_REQUEST_CODE);
     }
 
     public boolean getNightMode() {
@@ -107,14 +109,6 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
         mDataBinding.viewPager.setAdapter(new TabFragmentPagerAdapter(getSupportFragmentManager(), list));
         mDataBinding.viewPager.addOnPageChangeListener(mViewPagerListener);
         setPageSelected(mCurrentFragment);
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        if (mRefreshNightModeSwitch && mMainHeaderBinding != null) {
-            mMainHeaderBinding.dayNightSwitch.setChecked(SPUtils.getInstance().getNightMode());
-        }
     }
 
     @Override
@@ -178,5 +172,26 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
             // TODO Auto-generated method stub
             setPageSelected(position);
         }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (SELECT_SKIN_REQUEST_CODE == requestCode) {
+            initSkinName();
+        }
+    }
+
+    private void initSkinName() {
+        String curSkin = SkinCompatManager.getInstance().getCurSkinName();
+        String curSkinName = SKIN_NAMES[0];
+        for (int i = 0; i < SKIN_LIBS.length; i++) {
+            if (SKIN_LIBS[i].equals(curSkin)) {
+                curSkinName = SKIN_NAMES[i];
+                break;
+            }
+        }
+        mMainHeaderBinding.curSkinName.setText(curSkinName);
+        mMainHeaderBinding.dayNightSwitch.setChecked(SPUtils.getInstance().getNightMode());
     }
 }

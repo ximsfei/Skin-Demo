@@ -235,6 +235,7 @@
                 android:textColor="@color/text_color" />
 
             <TextView
+                android:id="@+id/cur_skin_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="官方红"

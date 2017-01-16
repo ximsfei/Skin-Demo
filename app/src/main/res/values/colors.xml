@@ -3,6 +3,7 @@
     <color name="colorPrimary">#ffce3d3a</color>
     <color name="colorPrimaryDark">#fffaebeb</color>
     <color name="colorAccent">#ffce3d3a</color>
+    <color name="status_bar_color">#ffce3d3a</color>
     <color name="tabSelectedTextColor">#ffce3d3a</color>
     <color name="tabTextColor">#88000000</color>
     <color name="tabIndicatorColor">#ffce0f00</color>
@@ -19,5 +20,4 @@
     <color name="text_color">#3d3d3d</color>
     <color name="adjust_pressed">#fffaebeb</color>
     <color name="text_color_title">#ffffffff</color>
-
 </resources>
