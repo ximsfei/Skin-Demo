@@ -26,6 +26,9 @@
             </intent-filter>
         </activity>
         <activity android:name="com.ximsfei.skindemo.ui.SkinLibActivity" />
+        <activity android:name="com.ximsfei.skindemo.ui.AboutMeActivity" />
+        <activity android:name="com.ximsfei.skindemo.ui.AboutSkinLibActivity" />
+        <activity android:name="com.ximsfei.skindemo.ui.AboutSkinDemoActivity" />
     </application>
 
 </manifest>

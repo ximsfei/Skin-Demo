@@ -15,6 +15,7 @@ import android.view.View;
 
 import com.ximsfei.skindemo.databinding.ActivityMainBinding;
 import com.ximsfei.skindemo.databinding.MainHeaderLayoutBinding;
+import com.ximsfei.skindemo.ui.AboutSkinLibActivity;
 import com.ximsfei.skindemo.ui.SkinLibActivity;
 import com.ximsfei.skindemo.ui.adapter.TabFragmentPagerAdapter;
 import com.ximsfei.skindemo.ui.DiscoverFragment;
@@ -78,6 +79,11 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
         mMainHeaderBinding = DataBindingUtil.bind(headerView);
         mMainHeaderBinding.setListener(this);
         initSkinName();
+    }
+
+    public void goAboutSkinLibActivity(View view) {
+        Intent intent = new Intent(this, AboutSkinLibActivity.class);
+        startActivity(intent);
     }
 
     public void goSkinLibActivity(View view) {
@@ -193,5 +199,14 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
         }
         mMainHeaderBinding.curSkinName.setText(curSkinName);
         mMainHeaderBinding.dayNightSwitch.setChecked(SPUtils.getInstance().getNightMode());
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (mDataBinding.drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            mDataBinding.drawerLayout.closeDrawer(GravityCompat.START);
+            return;
+        }
+        super.onBackPressed();
     }
 }
