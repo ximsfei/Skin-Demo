@@ -12,16 +12,9 @@ import skin.support.design.SkinMaterialManager;
  */
 
 public class App extends Application {
-    private static App sInstance;
-
-    public static App getInstance() {
-        return sInstance;
-    }
-
     @Override
     public void onCreate() {
         super.onCreate();
-        sInstance = this;
         SkinMaterialManager.init(this);
         SkinCompatManager.init(this).loadSkin();
         SPUtils.init(this);
