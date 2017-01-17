@@ -1,5 +1,13 @@
 # Skin-Demo
 
+## 介绍
+
+[app](app) //仿网易云音乐UI 官方红
+
+[skin-night](skin-night) //夜间模式皮肤包
+
+[skin-white](skin-white) //官方白皮肤包
+
 [换肤框架实现](https://github.com/ximsfei/Android-skin-support)
 
 下载[demo](https://github.com/ximsfei/Res/blob/master/skin-demo/app-debug.apk)
