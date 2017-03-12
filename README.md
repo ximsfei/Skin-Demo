@@ -10,7 +10,7 @@
 
 [换肤框架实现](https://github.com/ximsfei/Android-skin-support)
 
-下载[demo](https://github.com/ximsfei/Res/blob/master/skin-demo/app-debug.apk)
+下载[demo apk](https://github.com/ximsfei/Res/blob/master/skin-demo/app-debug.apk)
 
 ![red 1](https://github.com/ximsfei/Res/blob/master/skin-demo/red_1.png)
 ![red 2](https://github.com/ximsfei/Res/blob/master/skin-demo/red_2.png)
