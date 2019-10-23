@@ -23,5 +23,3 @@
 ![night 1](https://github.com/ximsfei/Res/blob/master/skin-demo/night_1.png)
 ![night 2](https://github.com/ximsfei/Res/blob/master/skin-demo/night_2.png)
 ![night 3](https://github.com/ximsfei/Res/blob/master/skin-demo/night_3.png)
-
-## UI参考: 网易云音乐App、[CloudReader](https://github.com/youlookwhat/CloudReader)、[banya](https://github.com/forezp/banya)
